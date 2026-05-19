@@ -1,0 +1,113 @@
+<root tasktype="tk_hiero_export.sg_shot_processor.ShotgunShotProcessor" presetname="Basic PTR Shot Offline">
+    <excludeTags valuetype="list" />
+    <includeTags valuetype="list" />
+    <versionIndex valuetype="int">1</versionIndex>
+    <versionPadding valuetype="int">4</versionPadding>
+    <exportTemplate valuetype="list">
+        <SequenceItem valuetype="tuple">
+            <SequenceItem valuetype="str">sequences/{sequence}/{shot}/reference/{project}_{sequence}_{shot}_{track}_{version}.mov</SequenceItem>
+            <SequenceItem valuetype="tk_hiero_export.version_creator.ShotgunTranscodePreset">
+                <root tasktype="tk_hiero_export.version_creator.ShotgunTranscodeExporter" presetname="">
+                    <file_type valuetype="str">mov</file_type>
+                    <reformat valuetype="dict">
+                        <to_type valuetype="str">None</to_type>
+                        <scale valuetype="float">1.0</scale>
+                        <resize valuetype="str">width</resize>
+                        <center valuetype="bool">True</center>
+                        <filter valuetype="str">Cubic</filter>
+                    </reformat>
+                    <channels valuetype="str">rgb</channels>
+                    <views valuetype="list">
+                        <SequenceItem valuetype="str">all</SequenceItem>
+                    </views>
+                    <mov valuetype="dict">
+                        <encoder valuetype="str">mov64</encoder>
+                        <codec valuetype="str">avc1&#x09;H.264</codec>
+                        <quality valuetype="int">3</quality>
+                        <settingsString valuetype="str">H.264, High Quality</settingsString>
+                        <keyframerate valuetype="int">1</keyframerate>
+                        <mov64_codec valuetype="str">appr</mov64_codec>
+                        <mov64_fast_start valuetype="str">true</mov64_fast_start>
+                        <mov64_write_timecode valuetype="str">true</mov64_write_timecode>
+                    </mov>
+                    <keepNukeScript valuetype="bool">False</keepNukeScript>
+                    <readAllLinesForExport valuetype="bool">False</readAllLinesForExport>
+                    <useSingleSocket valuetype="bool">False</useSingleSocket>
+                    <burninDataEnabled valuetype="bool">False</burninDataEnabled>
+                    <burninData valuetype="dict">
+                        <burnIn_textSize valuetype="NoneType">None</burnIn_textSize>
+                        <burnIn_padding valuetype="NoneType">None</burnIn_padding>
+                        <burnIn_font valuetype="NoneType">None</burnIn_font>
+                        <burnIn_topLeft valuetype="NoneType">None</burnIn_topLeft>
+                        <burnIn_topMiddle valuetype="str">enable.la</burnIn_topMiddle>
+                        <burnIn_topRight valuetype="str">{sequence}_{shot}</burnIn_topRight>
+                        <burnIn_bottomLeft valuetype="NoneType">None</burnIn_bottomLeft>
+                        <burnIn_bottomMiddle valuetype="NoneType">None</burnIn_bottomMiddle>
+                        <burnIn_bottomRight valuetype="NoneType">None</burnIn_bottomRight>
+                    </burninData>
+                    <additionalNodesEnabled valuetype="bool">False</additionalNodesEnabled>
+                    <additionalNodesData valuetype="list" />
+                    <method valuetype="str">Blend</method>
+                    <includeEffects valuetype="bool">False</includeEffects>
+                    <includeAudio valuetype="bool">False</includeAudio>
+                    <deleteAudio valuetype="bool">True</deleteAudio>
+                    <includeAnnotations valuetype="bool">False</includeAnnotations>
+                    <numChannels valuetype="str">stereo</numChannels>
+                    <codec valuetype="str">linear PCM (wav)</codec>
+                    <sampleRate valuetype="str">44100 Hz</sampleRate>
+                    <bitDepth valuetype="str">24 bit</bitDepth>
+                    <bitRate valuetype="str">320 kbp/s</bitRate>
+                    <writeNodeName valuetype="str">Write_{ext}</writeNodeName>
+                    <collateTracks valuetype="bool">False</collateTracks>
+                    <collateShotNames valuetype="bool">False</collateShotNames>
+                    <collateSequence valuetype="bool">False</collateSequence>
+                    <collateCustomStart valuetype="bool">True</collateCustomStart>
+                    <create_version valuetype="bool">True</create_version>
+                    <colorspace valuetype="str">rec709</colorspace>
+                </root>
+            </SequenceItem>
+        </SequenceItem>
+    </exportTemplate>
+    <exportRoot valuetype="str">Z:/projects/{project}</exportRoot>
+    <cutHandles valuetype="int">7</cutHandles>
+    <cutUseHandles valuetype="bool">True</cutUseHandles>
+    <cutLength valuetype="bool">True</cutLength>
+    <includeRetimes valuetype="bool">False</includeRetimes>
+    <startFrameIndex valuetype="int">1001</startFrameIndex>
+    <startFrameSource valuetype="str">Custom</startFrameSource>
+    <shotgunShotCreateProperties valuetype="dict">
+        <collateTracks valuetype="bool">False</collateTracks>
+        <collateShotNames valuetype="bool">False</collateShotNames>
+        <collateSequence valuetype="bool">False</collateSequence>
+        <collateCustomStart valuetype="bool">True</collateCustomStart>
+        <sg_status_hiero_tags valuetype="list">
+            <SequenceItem valuetype="tuple">
+                <SequenceItem valuetype="str">In Progress</SequenceItem>
+                <SequenceItem valuetype="str">ip</SequenceItem>
+            </SequenceItem>
+            <SequenceItem valuetype="tuple">
+                <SequenceItem valuetype="str">Final</SequenceItem>
+                <SequenceItem valuetype="str">fin</SequenceItem>
+            </SequenceItem>
+        </sg_status_hiero_tags>
+        <task_template_map valuetype="list">
+            <SequenceItem valuetype="tuple">
+                <SequenceItem valuetype="str">Ready To Start</SequenceItem>
+                <SequenceItem valuetype="str">Film VFX -  Comp Only Shot</SequenceItem>
+            </SequenceItem>
+            <SequenceItem valuetype="tuple">
+                <SequenceItem valuetype="str">In Progress</SequenceItem>
+                <SequenceItem valuetype="str">Film VFX -  Comp Only Shot</SequenceItem>
+            </SequenceItem>
+            <SequenceItem valuetype="tuple">
+                <SequenceItem valuetype="str">On Hold</SequenceItem>
+                <SequenceItem valuetype="str">Film VFX -  Comp Only Shot</SequenceItem>
+            </SequenceItem>
+            <SequenceItem valuetype="tuple">
+                <SequenceItem valuetype="str">Final</SequenceItem>
+                <SequenceItem valuetype="str">Film VFX -  Comp Only Shot</SequenceItem>
+            </SequenceItem>
+        </task_template_map>
+        <sg_cut_type valuetype="str" />
+    </shotgunShotCreateProperties>
+</root>

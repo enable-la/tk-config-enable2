@@ -1,7 +1,7 @@
 [![Build Status](https://dev.azure.com/shotgun-ecosystem/Toolkit/_apis/build/status/Configs/tk-config-default2?branchName=master)](https://dev.azure.com/shotgun-ecosystem/Toolkit/_build/latest?definitionId=49&branchName=master)
 
 -------------------------------------------------------------------------
-The Flow Production Tracking Toolkit Default Configuration
+The Flow Production Tracking Toolkit Enable.la Configuration
 -------------------------------------------------------------------------
 
 Welcome to the Flow Production Tracking Toolkit default configuration!

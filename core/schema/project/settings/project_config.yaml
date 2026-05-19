@@ -1,0 +1,16 @@
+# ENABLE.LA
+# Project based configurations.
+# Initialized from _template and updated by nuke tool
+# Ian Blewitt 2024
+
+tasks:
+  - comp
+  - paint
+  - plate
+  - postvis
+  - roto
+
+# Set minimum version (if other than v0001)
+minVersion: 'v0000'
+
+# TODO -  show's script_setup.py configuration
